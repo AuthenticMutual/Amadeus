@@ -3,6 +3,7 @@ import os
 from PyQt6.QtWidgets import QApplication, QWidget, QLabel, QVBoxLayout
 from PyQt6.QtCore import Qt
 from PyQt6.QtGui import QPixmap, QGuiApplication
+from voice_recognition import VoiceInput
 
 
 class Text_epta(QWidget):
