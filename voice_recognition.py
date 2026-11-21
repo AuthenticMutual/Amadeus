@@ -16,6 +16,6 @@ class VoiceInput(QThread):
             sd.wait()
             audio_data = sr.AudioData(recording.tobytes(), fs, 2)
             text = recognizer.recognize_google(audio_data, language="ru-RU")
-            self.finished_text.emit(text)
+            return self.finished_text.emit(text)
         except Exception:
-            self.finished_text.emit("Не расслышала... Повтори еще раз.")
+            return self.finished_text.emit("Не расслышала... Повтори еще раз.")
